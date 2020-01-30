@@ -13,8 +13,9 @@
 }
 .App > .todoList > li:nth-child(odd){
 	background: lightblue;
-	color: brown;
+	color: rgba(0,0,0,0.7);
 }
 .App > .todoList > li:nth-child(even){
 	background: lightyellow;
+	color: brown;
 }
