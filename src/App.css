@@ -1,1 +1,13 @@
 
+.App{
+	border-radius: 3px;
+	border: 1px solid white;
+	background: white;
+	min-width: 30em;
+	min-height: 20em;
+
+	color: #333;
+	padding: 0 1em;
+	margin: 2em;
+	box-shadow: 0 0 1em hsla(0,0%,0,0.15);
+}
