@@ -11,3 +11,10 @@
 	margin: 2em;
 	box-shadow: 0 0 1em hsla(0,0%,0,0.15);
 }
+.App > .todoList > li:nth-child(odd){
+	background: lightblue;
+	color: brown;
+}
+.App > .todoList > li:nth-child(even){
+	background: lightyellow;
+}
