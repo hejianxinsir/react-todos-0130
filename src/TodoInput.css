@@ -4,4 +4,10 @@
 	margin-bottom: 1em;
 	font-size: 16px;
 	padding: 0 .2em;
+
+	border: 1.5px solid lightgray;
+}
+.TodoInput:focus{
+	outline: none;
+	border: 1.5px solid brown;
 }
