@@ -13,12 +13,6 @@ AV.init({
   serverURLs: "https://5na1ulsu.lc-cn-n1-shared.com"
 });
 
-var TestObject = AV.Object.extend('TestObject');
-var testObject = new TestObject();
-testObject.set('words', 'hansonBoy');
-testObject.save().then(function (testObject) {
-  alert('保存成功。')
-})
 
 class App extends React.Component{
 	constructor(props){
