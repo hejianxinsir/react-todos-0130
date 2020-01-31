@@ -4,22 +4,13 @@ import TodoInput from './TodoInput.js';
 import TodoItem from './TodoItem';
 import 'normalize.css';
 import './reset.css';
-import * as localStore from './localStore';
-
-var AV = require('leancloud-storage');
-AV.init({
-  appId: "5NA1ULsUmgaPQbC5vlbwHPTQ-gzGzoHsz",
-  appKey: "RsdPdp4H4PPT8wHVo4HvR4On",
-  serverURLs: "https://5na1ulsu.lc-cn-n1-shared.com"
-});
-
 
 class App extends React.Component{
 	constructor(props){
 		super(props)
 		this.state = {
 			newTodo: '',
-			todoList: localStore.load('todoList') || [] 
+			todoList: [] 
 		}
 	}
 
@@ -53,7 +44,7 @@ class App extends React.Component{
 		)
 	}
 	componentDidUpdate(){
-		localStore.save('todoList', this.state.todoList)
+
 	}
 	toggle(e,todo){
 		todo.status = todo.status === 'completed' ? '' : 'completed'
