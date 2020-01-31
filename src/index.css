@@ -1,4 +1,7 @@
-body{background: #ddd;}
+
+body{
+	background-image: url("./photo/background.jpg");
+}
 
 #root{
 	display: flex;

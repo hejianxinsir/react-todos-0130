@@ -2,7 +2,6 @@
 .App{
 	border-radius: 3px;
 	border: 1px solid white;
-	background: white;
 	min-width: 30em;
 	min-height: 20em;
 
@@ -10,13 +9,16 @@
 	padding: 0 1em;
 	margin: 2em;
 	box-shadow: 0 0 1em hsla(0,0%,0,0.15);
+
+	background: white;
 }
-.App > .todoList > li:nth-child(odd){
+.App .todoList > li:nth-child(odd){
 	background: lightblue;
 	color: rgba(0,0,0,0.7);
 }
-.App > .todoList > li:nth-child(even){
+.App .todoList > li:nth-child(even){
 	background: lightyellow;
 	color: brown;
 }
-.App > h1{text-align: center;}
+.App h1{text-align: center;}
+

@@ -29,16 +29,18 @@ class App extends React.Component{
 
 		return (
 			<div className="App">
-				<h1>待办事项</h1>
-				<div className="inputWrapper">
-					<TodoInput content={this.state.newTodo}
-						onSubmit={this.addTodo.bind(this)}
-						onChange={this.changeTitle.bind(this)}
-					/>
+				<div className="darkMode">
+					<h1>待办事项</h1>
+					<div className="inputWrapper">
+						<TodoInput content={this.state.newTodo}
+							onSubmit={this.addTodo.bind(this)}
+							onChange={this.changeTitle.bind(this)}
+						/>
+					</div>
+					<ol className="todoList">		
+						{todos}
+					</ol>
 				</div>
-				<ol className="todoList">		
-					{todos}
-				</ol>
 			</div>
 		)
 	}
