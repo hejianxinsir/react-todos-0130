@@ -26,7 +26,6 @@ class App extends React.Component{
 				</li>
 			) 
 		})
-		console.log(todos);
 
 		return (
 			<div className="App">
@@ -43,17 +42,18 @@ class App extends React.Component{
 			</div>
 		)
 	}
+	componentDidUpdate(){
+		localStore.save('todoList', this.state.todoList)
+	}
 	toggle(e,todo){
 		todo.status = todo.status === 'completed' ? '' : 'completed'
 		this.setState(this.state)
-		localStore.save('todoList', this.state.todoList)
 	}
 	changeTitle(event){
 			this.setState({
 				newTodo: event.target.value,
 				todoList: this.state.todoList
 			})
-			localStore.save('todoList', this.state.todoList)
 	}
 	addTodo(event){
 		if(event.target.value){
@@ -70,12 +70,10 @@ class App extends React.Component{
 		}else{
 			alert('Please input a todo item ~ ')
 		}
-		localStore.save('todoList', this.state.todoList)
 	}
 	delete(event, todo){
 		todo.deleted = true
 		this.setState(this.state)
-		localStore.save('todoList', this.state.todoList)
 	}
 }
 
