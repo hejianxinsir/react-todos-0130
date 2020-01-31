@@ -31,7 +31,7 @@ class App extends React.Component{
 
 		return (
 			<div className="App">
-				<h1>我的待办</h1>
+				<h1>待办事项</h1>
 				<div className="inputWrapper">
 					<TodoInput content={this.state.newTodo}
 						onSubmit={this.addTodo.bind(this)}
@@ -55,16 +55,21 @@ class App extends React.Component{
 			})
 	}
 	addTodo(event){
-		this.state.todoList.push({
-			id: idMaker(),
-			title: event.target.value,
-			status: null,
-			deleted: false
-		})
-		this.setState({
-			newTodo: '',
-			todoList: this.state.todoList
-		})
+		if(event.target.value){
+			this.state.todoList.push({
+				id: idMaker(),
+				title: event.target.value,
+				status: null,
+				deleted: false
+			})
+			this.setState({
+				newTodo: '',
+				todoList: this.state.todoList
+			})
+		}else{
+			alert('Please input a todo item ~ ')
+		}
+
 	}
 	delete(event, todo){
 		todo.deleted = true
