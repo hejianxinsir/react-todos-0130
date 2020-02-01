@@ -22,7 +22,7 @@ export function signUp(username, password, successFn, errorFn){
 	return undefined
 }
 
-function getUserFormAVUser(AVUser){
+function getUserFromAVUser(AVUser){
 	return {
 		id: AVUser.id,
 		...AVUser.attributes
