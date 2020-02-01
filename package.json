@@ -12,6 +12,7 @@
     "react-dom": "^16.12.0",
     "react-scripts": "1.1.4"
   },
+	"homepage": "https://hejianxinsir.github.io/react-todos-0130/build",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
