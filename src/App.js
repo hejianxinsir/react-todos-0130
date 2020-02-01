@@ -10,6 +10,7 @@ class App extends React.Component{
 	constructor(props){
 		super(props)
 		this.state = {
+			user: {},
 			newTodo: '',
 			todoList: [] 
 		}
@@ -30,7 +31,7 @@ class App extends React.Component{
 		return (
 			<div className="App">
 				<div className="darkMode">
-					<h1>待办事项</h1>
+					<h1>{this.state.user.username || '我'}的待办</h1>
 					<div className="inputWrapper">
 						<TodoInput content={this.state.newTodo}
 							onSubmit={this.addTodo.bind(this)}
@@ -40,10 +41,14 @@ class App extends React.Component{
 					<ol className="todoList">		
 						{todos}
 					</ol>
-					<UserDialog />
+					<UserDialog onSignUp={this.onSignUp.bind(this)}/>
 				</div>
 			</div>
 		)
+	}
+	onSignUp(user){
+		this.state.user = user
+		this.setState(this.state)
 	}
 	componentDidUpdate(){
 
