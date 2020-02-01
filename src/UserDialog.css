@@ -24,5 +24,5 @@
 	width: 4em;
 }
 .UserDialog form > .row.actions {padding-left: 4em;}
-.UserDialog form > .row.actions > button{padding: 5px; border-radius: 5px;}
+.UserDialog form > .row.actions > button{padding: 3px; border-radius: 5px; font-size: 12px;}
 .UserDialog form > .row.actions > button:focus{outline: none; border: 1px solid brown; color: brown;}
