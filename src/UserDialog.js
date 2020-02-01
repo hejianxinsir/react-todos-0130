@@ -20,10 +20,14 @@ export default class UserDialog extends Component {
 	signUp(e){}
 	signIn(e){}
 	changeUsername(e){
-		
+		let stateCopy = JSON.parse(JSON.stringify(this.state))	
+		stateCopy.formData.username = e.target.value
+		this.setState(stateCopy)
 	}
 	changePassword(e){
-		
+		let stateCopy = JSON.parse(JSON.stringify(this.state))	
+		stateCopy.formData.password = e.target.value
+		this.setState(stateCopy)
 	}
 		render(){
 				let signUpForm = (
