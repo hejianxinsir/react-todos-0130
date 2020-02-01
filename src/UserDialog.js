@@ -25,7 +25,14 @@ export default class UserDialog extends Component {
 			this.props.onSignUp.call(null, user)
 		}
 		let error = (error)=>{
-			alert(error)
+			switch(error.code){
+				case 202:
+					alert('用户名已被占用')
+					break
+				default:
+					alert('出错啦')
+					break
+			}
 		}
 		signUp(username, password, success, error)
 	}
@@ -36,7 +43,14 @@ export default class UserDialog extends Component {
 			this.props.onSignIn.call(null, user)
 		}
 		let error = (error)=>{
-			alert(error)
+			switch(error.code){
+				case 210:
+					alert('用户名与密码不匹配')
+					break
+				default:
+					alert(error)
+					break
+			}			
 		}
 		signIn(username, password, success, error)
 	}
