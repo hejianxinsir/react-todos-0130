@@ -5,7 +5,7 @@ import TodoItem from './TodoItem';
 import 'normalize.css';
 import './reset.css';
 import UserDialog from './UserDialog';
-import {getCurrentUser} from './leanCloud';
+import {getCurrentUser, signOut} from './leanCloud';
 
 class App extends React.Component{
 	constructor(props){
@@ -32,7 +32,9 @@ class App extends React.Component{
 		return (
 			<div className="App">
 				<div className="darkMode">
-					<h1>{this.state.user.username || '我'}的待办</h1>
+					<h1>{this.state.user.username || '我'}的待办
+						{this.state.user.id ? <button className="btn-logOut" onClick={this.signOut.bind(this)}>退出</button> : null}
+					</h1>
 					<div className="inputWrapper">
 						<TodoInput content={this.state.newTodo}
 							onSubmit={this.addTodo.bind(this)}
@@ -46,6 +48,12 @@ class App extends React.Component{
 				</div>
 			</div>
 		)
+	}
+	signOut(){
+		signOut()
+		let stateCopy = JSON.parse(JSON.stringify(this.state))
+		stateCopy.user = {}
+		this.setState(stateCopy)
 	}
 	onSignUp(user){
 		let stateCopy = JSON.parse(JSON.stringify(this.state))

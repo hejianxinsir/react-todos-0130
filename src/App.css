@@ -21,4 +21,5 @@
 	color: brown;
 }
 .App h1{text-align: center;}
+.App .btn-logOut {padding: 3px; font-size: 16px; border-radius: 3px; margin-left: 10px;}
 
