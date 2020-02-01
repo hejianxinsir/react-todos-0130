@@ -29,4 +29,11 @@ function getUserFromAVUser(AVUser){
 	}
 }
 
-
+export function getCurrentUser(){
+	let user = AV.User.current()
+	if(user){
+		return getUserFromAVUser(user)
+	}else{
+		return null
+	}
+}
