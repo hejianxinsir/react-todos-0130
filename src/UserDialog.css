@@ -1,12 +1,12 @@
 .UserDialog-Wrapper{
 	display: flex; justify-content: center; align-items: center;
+	background: hsla(0,0%,0%,0.40);
 }
 .UserDialog{
 	border-radius: 3px;
 	min-width: 20em;
 	background: white;
 	border: 1px solid #aaa;
-	box-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
 }
 .UserDialog > nav:first-child{padding: 1em; margin-left: -2em;} 
 .UserDialog > nav:first-child label{
@@ -23,6 +23,6 @@
 .UserDialog form > .row > label:first-child {
 	width: 4em;
 }
-.UserDialog form > .row.actions {padding-left: 4em;}
-.UserDialog form > .row.actions > button{padding: 3px; border-radius: 5px; font-size: 12px;}
+.UserDialog form > .row.actions {padding-left: 4em; display: flex; align-items: center;}
+.UserDialog form > .row.actions > button{padding: 3px; border-radius: 5px; font-size: 12px; margin-right: .5em;}
 .UserDialog form > .row.actions > button:focus{outline: none; border: 1px solid brown; color: brown;}
