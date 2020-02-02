@@ -6,7 +6,7 @@
 	min-width: 20em;
 	background: white;
 	border: 1px solid #aaa;
-	box-shadow: 0 0 1em hsla(0,0%,0%,0.35);
+	box-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
 }
 .UserDialog > nav:first-child{padding: 1em; margin-left: -2em;} 
 .UserDialog > nav:first-child label{

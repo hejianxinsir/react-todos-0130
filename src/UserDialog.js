@@ -29,6 +29,8 @@ export default class UserDialog extends Component {
 				case 202:
 					alert('用户名已被占用')
 					break
+				case 203:
+					alert('电子邮箱已被占用')
 				default:
 					alert('出错啦')
 					break
@@ -46,6 +48,12 @@ export default class UserDialog extends Component {
 			switch(error.code){
 				case 210:
 					alert('用户名与密码不匹配')
+					break
+				case 201:
+				 alert('请填写密码')
+				 break
+				case 205:
+					alert('找不到邮箱对应的账户')
 					break
 				default:
 					alert(error)
