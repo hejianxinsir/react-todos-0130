@@ -16,7 +16,7 @@ export default class UserDialog extends Component {
 			}
 		}
 	}
-		signUp(e){
+	signUp(e){
 		e.preventDefault()
 		let {email, username, password} = this.state.formData
 		let success = (user)=>{

@@ -1,12 +1,14 @@
 .UserDialog-Wrapper{
-	display: flex; justify-content: center; align-items: center;
-	background: hsla(0,0%,0%,0.40);
+	/*display: flex; justify-content: center; align-items: center;*/
+	position: absolute;
+	left: 20%;
 }
 .UserDialog{
 	border-radius: 3px;
-	min-width: 20em;
+	max-width: 20em;
 	background: white;
 	border: 1px solid #aaa;
+	margin-top: 100px;
 }
 .UserDialog .signInOrSignUp > nav:first-child{padding: 1em; margin-left: -2em;}
 .UserDialog .signInOrSignUp > nav:first-child label{margin-left: 2em; cursor: pointer;}
@@ -21,5 +23,5 @@
 	width: 4em;
 }
 .UserDialog form > .row.actions {padding-left: 4em; display: flex; align-items: center;}
-.UserDialog form > .row.actions > button{padding: 3px; border-radius: 5px; font-size: 12px; margin-right: .5em;}
+.UserDialog form > .row.actions > button{padding: 3px; border-radius: 5px; font-size: 12px; margin-right: .5em; color: #278eff;}
 .UserDialog form > .row.actions > button:focus{outline: none; border: 1px solid brown; color: brown;}

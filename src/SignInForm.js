@@ -1,4 +1,5 @@
 import React from 'react';
+import './SignInForm.css';
 export default function(props){
 		return(
 				<form className="signIn" onSubmit={props.onSubmit}> {/*登录*/}
@@ -15,8 +16,8 @@ export default function(props){
 						/>
 					</div>
 					<div className="row actions">
-						<button type="submit">登录</button>
-						<a href="#" onClick={props.onForgotPassword}>忘记密码了？</a>
+						<button type="submit" className="signIn-btn">登录</button>
+						<a href="#" onClick={props.onForgotPassword} className="forgotPassword">忘记密码了？</a>
 					</div>
 				</form>
 		)

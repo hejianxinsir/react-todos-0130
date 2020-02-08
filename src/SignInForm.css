@@ -1,0 +1,12 @@
+
+.forgotPassword {
+	font-size: 12px;
+	font-weight: bold;
+	color: brown;
+
+	margin-left: 5px;
+	text-decoration: none;
+}
+.signIn-btn{
+	color: #278eff;
+}

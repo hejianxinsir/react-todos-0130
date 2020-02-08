@@ -34,6 +34,7 @@ export const TodoModel = {
 		acl.setPublicReadAccess(false)
 		acl.setWriteAccess(AV.User.current(),true)
 		acl.setReadAccess(AV.User.current(), true)
+		acl.setReadAccess(AV.User.current(), true)
 		todo.setACL(acl);
 
 		todo.save().then(function(response){
@@ -76,8 +77,10 @@ export function signUp(email, username, password, successFn, errorFn){
 export function sendPasswordResetEmail(email, successFn, errorFn){
 	AV.User.requestPasswordReset(email).then(function(success){
 		successFn.call()
+		alert('发送成功，请查收邮件~')
 	},function(error){
-		errorFn.call(null, error)
+		console.dir(error)
+		alert('发送失败，可能是因为发送次数过多')
 	})
 }
 

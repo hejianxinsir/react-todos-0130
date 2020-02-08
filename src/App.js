@@ -13,7 +13,8 @@ class App extends Component{
 		this.state = {
 			user: getCurrentUser() || {},
 			newTodo: '',
-			todoList: [] 
+			todoList: [], 
+			showOrHide: false, /* false: 把我的代办变灰；否则变白*/
 		}
 		let user = getCurrentUser()
 		if(user){
@@ -66,6 +67,7 @@ class App extends Component{
 		signOut()
 		let stateCopy = JSON.parse(JSON.stringify(this.state))
 		stateCopy.user = {}
+		stateCopy.todoList = []
 		this.setState(stateCopy)
 	}
 	onSignUpOrSignIn(user){
@@ -93,11 +95,11 @@ class App extends Component{
 			})
 	}
 	addTodo(event){
-			let newTodo = {
-				title: event.target.value,
-				status: '',
-				deleted: false
-			};
+		let newTodo = {
+			title: event.target.value,
+			status: '',
+			deleted: false
+		}
 	
 		TodoModel.create(newTodo, (id)=>{
 			newTodo.id = id
