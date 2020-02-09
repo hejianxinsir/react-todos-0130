@@ -8,11 +8,11 @@
 	padding: 0 .5em;
 }
 .btn {
-	border: 1px solid gray;
 	padding: 7px;
-	border-radius: 15px;
+	border-radius: 16px;
 	font-size: 12px;
-	color: brown;
+	color: white;
+	background: brown;
 }
 .btn:focus{
 	outline: none;

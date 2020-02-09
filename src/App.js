@@ -13,8 +13,7 @@ class App extends Component{
 		this.state = {
 			user: getCurrentUser() || {},
 			newTodo: '',
-			todoList: [], 
-			showOrHide: false, /* false: 把我的代办变灰；否则变白*/
+			todoList: [] 
 		}
 		let user = getCurrentUser()
 		if(user){

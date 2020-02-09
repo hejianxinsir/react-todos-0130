@@ -5,6 +5,8 @@ function submit (props, e){
 	if(e.key === 'Enter'){
 		if(e.target.value.trim() !== ''){
 			props.onSubmit(e)
+		}else{
+			alert('请输入内容')
 		}
 	}
 }

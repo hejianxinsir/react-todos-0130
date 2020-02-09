@@ -1,5 +1,4 @@
 import React from 'react';
-import './SignInForm.css';
 export default function(props){
 		return(
 				<form className="signIn" onSubmit={props.onSubmit}> {/*登录*/}

@@ -1,6 +1,6 @@
 
 .App{
-	border-radius: 3px;
+	border-radius: 4px;
 	border: 1px solid white;
 	min-width: 30em;
 	min-height: 20em;
@@ -8,18 +8,19 @@
 	color: #333;
 	padding: 0 1em;
 	margin: 2em;
-	box-shadow: 3px 2px 2px rgba(0,0,0,0.5); 
+	box-shadow: 4px 4px 2px rgba(0,0,0,0.5); 
 	background: white;
 }
-.App > .darkMode{position: relative;}
 .App .todoList > li:nth-child(odd){
-	background: lightblue;
-	color: rgba(0,0,0,0.7);
 }
 .App .todoList > li:nth-child(even){
-	background: lightyellow;
-	color: brown;
 }
+.App .todoList .TodoItem{
+	border-bottom: .5px solid lightgray;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+} 
+
 .App h1{text-align: center;}
 .App .btn-logOut {padding: 3px; font-size: 16px; border-radius: 3px; margin-left: 10px;}
 
